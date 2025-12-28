@@ -1,0 +1,10 @@
+*.code-workspace
+*.txt
+__pycache__/
+.pytest_cache/
+.logs/
+.env*
+!.env.example
+outputs/
+.ruff_cache/
+.DS_Store

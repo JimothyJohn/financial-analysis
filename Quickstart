@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Look for UV and install it if not present
+if ! command -v uv &> /dev/null
+then
+    echo "Install uv with 'curl -LsSf https://astral.sh/uv/install.sh | sh'"
+    exit 1
+fi
+
+# Send output to junk
+echo "" # Add some space
+uv run ty check financial_analysis && \
+    uv run ruff check --fix --unsafe-fixes financial_analysis && \
+    echo "" && \
+    uv run financial_analysis --company ${1}
+
+echo "" # Add some space
