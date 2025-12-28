@@ -12,6 +12,6 @@ echo "" # Add some space
 uv run ty check financial_analysis && \
     uv run ruff check --fix --unsafe-fixes financial_analysis && \
     echo "" && \
-    uv run financial_analysis --company ${1}
+    uv run financial_analysis -c ${1}
 
 echo "" # Add some space

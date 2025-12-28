@@ -3,6 +3,9 @@ import json
 from sec_api import QueryApi
 from sec_api import RenderApi
 from sec_api import XbrlApi
+from models import Filing, CoverPage, StatementsOfIncome, StatementsOfComprehensiveIncome, Keys
+from config import WHITELIST
+from utils import get_value
 
 logging.basicConfig(level=logging.INFO, handlers=[])
 
@@ -11,26 +14,17 @@ logger = logging.getLogger(__name__)
 
 class Analyst:
     def __init__(self, company: str, year: int, api_key: str) -> None:
-        assert company in [
-            "aapl",
-            "ait",
-            "nvda",
-            "tsla",
-            "amzn",
-            "amd",
-            "f",
-            "intc",
-            "msft",
-            "gpc",
-        ], "Company not supported"
+        assert company in WHITELIST, "Company not supported"
         self.company = company
         self.index = 2025 - year
         self.renderApi = RenderApi(api_key=api_key)
         self.xbrlApi = XbrlApi(api_key)
         self.queryApi = QueryApi(api_key=api_key)
-        self.filing: dict = None
+        self._get_filing_as_json(company)
+        self._get_keys()
+        self._factory()
 
-    def _get_filing_as_json(self, company: str):
+    def _get_filing_as_json(self, company: str, save: bool = True) -> None:
         # TODO Try some good old fashioned SQL injection here
         query = {
             "query": f'ticker:{company} AND formType:"10-K"',
@@ -44,51 +38,45 @@ class Analyst:
 
         # 10-K HTM File URL example
         self.filing = self.xbrlApi.xbrl_to_json(htm_url=filingUrl)
-        with open(f"outputs/2025/{self.company} 10-k.json", "w") as f:
-            f.write(json.dumps(self.filing, indent=4))
+        if save:
+            with open(f"outputs/2025/{self.company} 10-k.json", "w") as f:
+                f.write(json.dumps(self.filing, indent=4))
 
-    def extract_gross_profit(self, soi: dict) -> int:
-        for key in soi.keys():
-            if "GrossProfit" in key:
-                self.gross_profit = int(soi[key][self.index]["value"])
-                print(
-                    f"\t{self.company.upper()} {2025-self.index} Gross Profit: ${self.gross_profit:,.0f}"
-                )
-                return self.gross_profit
-        raise ValueError("GrossProfit not found")
+    def _get_keys(self) -> None:
+        # Find keys for income statement items
+        for key in self.filing["StatementsOfIncome"].keys():
+            if "NetIncome" in key:
+                net_income_key = key
+            elif "CostOf" in key:
+                cogs_key = key
+            elif "Profit" in key:
+                gross_profit_key = key
+            
+        comprehensive_key = next((k for k in self.filing["StatementsOfComprehensiveIncome"].keys() if "ComprehensiveIncomeNetOfTax" in k), "")
 
-    def extract_cogs(self, soi: dict) -> int:
-        for key in soi.keys():
-            if "CostOfGoods" in key:
-                self.cogs = int(soi[key][self.index]["value"])
-                print(
-                    f"\t{self.company.upper()} {2025-self.index} Cost of Goods Sold: ${self.cogs:,.0f}"
-                )
-                return self.cogs
+        assert cogs_key, "COGS not found" 
+        assert gross_profit_key, "Gross Profit not found" 
+        assert net_income_key, "Net Income not found" 
+        assert comprehensive_key, "Comprehensive Income not found" 
 
-        raise ValueError("COGS not found")
-
-    def _extract_net_income(self, soci: dict) -> int:
-        for key in soci.keys():
-            if "ComprehensiveIncomeNetOfTax" in key:
-                self.net_income = int(
-                    self.filing["StatementsOfComprehensiveIncome"][key][0]["value"]
-                )
-                return self.net_income
-        raise ValueError("ComprehensiveIncomeNetOfTax not found")
-
-    def _extract_comprehensive_net_income(self, soci: dict) -> int:
-        for key in soci.keys():
-            if "Comprehensive" in key:
-                self.net_income = int(self.filing[key])
-                return self.net_income
-        raise ValueError("ComprehensiveIncomeNetOfTax not found")
-
-    def get_comprehensive_income_net_of_tax(self) -> int:
-
-        self._get_filing_as_json(self.company)
-        self.net_income = self._extract_net_income(
-            self.filing["StatementsOfComprehensiveIncome"]
+        self.keys = Keys(
+            net_income=net_income_key,
+            cost_of_goods_sold=cogs_key,
+            gross_profit=gross_profit_key,
+            comprehensive_income=comprehensive_key
         )
 
-        return self.net_income
+    def _factory(self) -> None:
+        self.Filing: Filing = Filing(
+            CoverPage=CoverPage(
+                DocumentType=get_value(self.filing["CoverPage"]["DocumentType"]),
+                DocumentPeriodEndDate=get_value(self.filing["CoverPage"]["DocumentPeriodEndDate"]),
+            ),
+            StatementsOfIncome=StatementsOfIncome(
+                GrossProfit=int(get_value(self.filing["StatementsOfIncome"][self.keys.gross_profit][self.index])),
+                CostOfGoodsSold=int(get_value(self.filing["StatementsOfIncome"][self.keys.cost_of_goods_sold][self.index])),
+                NetIncome=int(get_value(self.filing["StatementsOfIncome"][self.keys.net_income][self.index]))),
+            StatementsOfComprehensiveIncome=StatementsOfComprehensiveIncome(
+                ComprehensiveIncome=int(get_value(self.filing["StatementsOfComprehensiveIncome"][self.keys.comprehensive_income][self.index])))
+        )
+
