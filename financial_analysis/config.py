@@ -1,8 +1,8 @@
 WHITELIST = [
             "aapl",
             "ait",
+            "cron",
             "nvda",
-            "tsla",
             "amzn",
             "amd",
             "f",
@@ -10,4 +10,6 @@ WHITELIST = [
             "msft",
             "pcg",
             "gpc",
+            "ge",
+            "jakk",
         ]

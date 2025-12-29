@@ -13,6 +13,10 @@ o Reconfigure [.env.example](.env.example) and rename it to [.env](.env).
 ./Quickstart aapl
 ```
 
+## TODO
+
+[ ] Consolidate expenses into lists of keys and summarize them.
+
 ## Resources
 
 Wouldn't be possible without sec-api, hoping to make totally independent and built in Rust eventually, though, would be cool.

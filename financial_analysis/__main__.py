@@ -37,8 +37,26 @@ def main() -> None:
 
     analyst = Analyst(args.company, args.year, SEC_API_KEY)
 
-    print(f"\t{args.company.upper()} made ${analyst.Filing.StatementsOfComprehensiveIncome.ComprehensiveIncome:,.0f} in {args.year}")
+    soi = analyst.Filing.StatementsOfIncome
+    debt = 0
+    if soi.Debt:
+        debt = soi.Debt
 
+    print(f"\n\tIn {args.year}, {args.company.upper()} made ${analyst.Filing.StatementsOfComprehensiveIncome.ComprehensiveIncome:,.0f}:\n")
+    print(f"\t${soi.Revenue:,.0f}\t\tRevenue")
+    print(f"\t-${soi.Costs:,.0f}\t\tCOGS")
+    print(f"\t${soi.Revenue - soi.Costs:,.0f}\t\tGross Profit")
+    print(f"\t-${soi.Operations:,.0f}\t\tOperations")
+    print(f"\t${soi.Revenue - soi.Costs - soi.Operations:,.0f}\t\tEBIDTA")
+    print(f"\t-${soi.Expenses:,.0f}\t\tOther Expenses")
+    print(f"\t-${soi.Taxes:,.0f}\t\tTaxes")
+    print(f"\t-${debt:,.0f}\t\tDebt")
+    print(f"\t${soi.Revenue - soi.Costs - soi.Operations - soi.Expenses - soi.Taxes - debt:,.0f}\t\tNet Income\n")
+
+
+    print(f"\t${analyst.Filing.BalanceSheets.Cash:,.0f}\t\tCash")
+    print(f"\t${analyst.Filing.BalanceSheets.Assets:,.0f}\t\tAssets")
+    print(f"\t${analyst.Filing.BalanceSheets.Equity:,.0f}\t\tEquity")
 
 if __name__ == "__main__":
     main()
