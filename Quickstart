@@ -8,8 +8,8 @@ then
 fi
 
 # Send output to junk
-echo "" # Add some space
-uv run ty check financial_analysis && \
+uv sync && \
+    uv run ty check financial_analysis && \
     uv run ruff check --fix --unsafe-fixes financial_analysis && \
+    uv run pytest -q && \
     uv run financial_analysis -c ${1}
-

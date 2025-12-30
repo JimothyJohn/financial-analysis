@@ -1,9 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "financial-analysis"
 version = "0.1.0"
-description = "Add your description here"
+description = "Quickly estimate a company's 10-K at a very high level"
 readme = "README.md"
 requires-python = ">=3.12"
+packages=["financial_analysis"]
 dependencies = [
     "pydantic>=2.12.4",
     "sec-api>=1.0.32",
@@ -14,5 +19,5 @@ dev = [
     "pytest>=8.4.2",
     "python-dotenv>=1.2.1",
     "ruff>=0.13.0",
-    "ty>=0.0.7",
+    "ty>=0.0.8",
 ]
