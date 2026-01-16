@@ -8,8 +8,16 @@ __pycache__/
 outputs/
 .ruff_cache/
 .DS_Store
-.env/
+.env
+.venv/
 
 # Added by cargo
 
 /target
+
+
+# Added by cargo
+#
+# already existing elements were commented out
+
+#/target

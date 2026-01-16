@@ -9,6 +9,7 @@ SEC_API_KEY = str(f"{os.environ.get('SEC_API_KEY')}")
 WHITELIST = [
     "aapl",
     "ait",
+    "cbrl",
     "cron",
     "nvda",
     "amzn",
@@ -16,8 +17,10 @@ WHITELIST = [
     "f",
     "intc",
     "msft",
+    "orcl",
     "pcg",
     "gpc",
     "ge",
+    "rio",
     "jakk",
 ]

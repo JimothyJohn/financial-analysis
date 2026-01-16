@@ -15,18 +15,12 @@ o Reconfigure [.env.example](.env.example) and rename it to [.env](.env).
 
 ## TODO
 
-[ ] Consolidate expenses into lists of keys and summarize them.
-
 [ ] Add comprehensive expenses.
 
-[ ] Find better solution for deriving keys for each line item.
+[ ] Double check period with year argument
 
 ## Resources
 
-Wouldn't be possible without sec-api, hoping to make totally independent and built in Rust eventually, though, would be cool.
-
-o [XBLR to JSON](https://github.com/janlukasschroeder/sec-api-python?tab=readme-ov-file#xbrl-to-json-converter-api)
+Wouldn't be possible without [sec-api](https://github.com/janlukasschroeder/sec-api-python), hoping to make this totally independent and built in [Rust](https://github.com/TiesdeKok/fast_xbrl_parser/tree/master) eventually, though.
 
 o [XBLR Guide](https://www.sec.gov/files/edgar/filer-information/specifications/xbrl-guide.pdf)
-
-o [Rust XBLR Parser](https://github.com/TiesdeKok/fast_xbrl_parser/tree/master)

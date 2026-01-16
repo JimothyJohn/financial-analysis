@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis CLI - Documentation</title>
+    <style>
+        :root {
+            --bg-primary: #0f1419;
+            --bg-secondary: #1a1f29;
+            --bg-tertiary: #242933;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-primary: #58a6ff;
+            --accent-secondary: #1f6feb;
+            --success: #3fb950;
+            --warning: #d29922;
+            --border: #30363d;
+            --code-bg: #161b22;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            color: var(--accent-primary);
+        }
+
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0 0.25rem;
+        }
+
+        .section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--text-primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block pre {
+            margin: 0;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block code {
+            color: var(--text-primary);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.25rem 0.5rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.2s, background 0.2s;
+        }
+
+        .code-block:hover .copy-btn {
+            opacity: 1;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent-secondary);
+            color: var(--text-primary);
+        }
+
+        .syntax-bash { color: #79c0ff; }
+        .syntax-comment { color: #8b949e; font-style: italic; }
+        .syntax-string { color: #a5d6ff; }
+        .syntax-keyword { color: #ff7b72; }
+        .syntax-number { color: #79c0ff; }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--bg-tertiary);
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .collapsible:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1rem;
+        }
+
+        .collapsible-content.active {
+            max-height: 1000px;
+            padding: 1rem;
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            margin-top: -6px;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.active {
+            transform: rotate(180deg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-done {
+            background: rgba(63, 185, 80, 0.2);
+            color: var(--success);
+        }
+
+        .status-todo {
+            background: rgba(210, 153, 34, 0.2);
+            color: var(--warning);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .json-output {
+            font-size: 0.85rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-secondary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 6px;
+            border: 1px solid var(--accent-primary);
+            transition: background 0.2s, transform 0.2s;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .highlight {
+            color: var(--accent-primary);
+        }
+
+        .inline-code {
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+            color: var(--accent-primary);
+        }
+
+        .workflow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .workflow-step {
+            text-align: center;
+            flex: 1;
+        }
+
+        .workflow-arrow {
+            color: var(--accent-primary);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .workflow {
+                flex-direction: column;
+            }
+
+            .workflow-arrow {
+                transform: rotate(90deg);
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">=Ê Financial Analysis CLI</a>
+                <nav class="nav">
+                    <a href="#quickstart">Quickstart</a>
+                    <a href="#features">Features</a>
+                    <a href="#usage">Usage</a>
+                    <a href="#api">API Reference</a>
+                    <a href="#examples">Examples</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Financial Analysis CLI</h1>
+                <p>A powerful command-line tool for retrieving and analyzing SEC financial data with ease.</p>
+                <div>
+                    <span class="badge">Python 3.x</span>
+                    <span class="badge">SEC EDGAR API</span>
+                    <span class="badge">XBRL Parser</span>
+                    <span class="badge">Pydantic</span>
+                </div>
+                <div class="btn-group">
+                    <a href="#quickstart" class="btn">Get Started</a>
+                    <a href="https://github.com/janlukasschroeder/sec-api-python" class="btn" style="background: var(--bg-tertiary);">View on GitHub</a>
+                </div>
+            </section>
+
+            <section id="quickstart" class="section">
+                <h2>=€ Quickstart</h2>
+                <p>Get up and running in minutes with Financial Analysis CLI.</p>
+
+                <h3>1. Get Your API Key</h3>
+                <p>Sign up for a free API key at <a href="https://sec-api.io/signup/free" style="color: var(--accent-primary);">sec-api.io</a></p>
+
+                <h3>2. Configure Environment</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><code><span class="syntax-comment"># Rename .env.example to .env</span>
+<span class="syntax-bash">cp</span> .env.example .env
+
+<span class="syntax-comment"># Add your API key to .env</span>
+<span class="syntax-keyword">SEC_API_KEY</span>=<span class="syntax-string">your_api_key_here</span></code></pre>
+                </div>
+
+                <h3>3. Run Analysis</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><code><span class="syntax-comment"># Analyze Apple Inc.</span>
+<span class="syntax-bash">./Quickstart aapl</span>
+
+<span class="syntax-comment"># Or use Python directly</span>
+<span class="syntax-bash">python -m financial_analysis --company aapl --year 2024</span></code></pre>
+                </div>
+            </section>
+
+            <section id="features" class="section">
+                <h2>( Features</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="feature-icon">=</div>
+                        <h3>SEC EDGAR Integration</h3>
+                        <p>Direct access to the SEC's EDGAR database for retrieving official 10-K filings from publicly traded companies.</p>
+                    </div>
+                    <div class="card">
+                        <div class="feature-icon">=È</div>
+                        <h3>XBRL Parsing</h3>
+                        <p>Automatic parsing of XBRL formatted financial statements into structured, easily accessible data models.</p>
+                    </div>
+                    <div class="card">
+                        <div class="feature-icon">=°</div>
+                        <h3>Financial Metrics</h3>
+                        <p>Extract comprehensive financial data including Revenue, EBITDA, Net Income, Assets, Liabilities, and more.</p>
+                    </div>
+                    <div class="card">
+                        <div class="feature-icon"><¯</div>
+                        <h3>Type-Safe Models</h3>
+                        <p>Built with Pydantic for robust data validation and type safety throughout the analysis pipeline.</p>
+                    </div>
+                    <div class="card">
+                        <div class="feature-icon">=¾</div>
+                        <h3>Local Caching</h3>
+                        <p>Smart caching system to avoid redundant API calls and store financial data locally in JSON format.</p>
+                    </div>
+                    <div class="card">
+                        <div class="feature-icon">¡</div>
+                        <h3>Fast & Efficient</h3>
+                        <p>Optimized data extraction with keyword-based parsing and intelligent field detection algorithms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="workflow" class="section">
+                <h2>= How It Works</h2>
+                <div class="workflow">
+                    <div class="workflow-step">
+                        <div class="feature-icon">=å</div>
+                        <h3>1. Fetch</h3>
+                        <p>Query SEC EDGAR API for 10-K filings</p>
+                    </div>
+                    <div class="workflow-arrow">’</div>
+                    <div class="workflow-step">
+                        <div class="feature-icon">=</div>
+                        <h3>2. Parse</h3>
+                        <p>Convert XBRL to structured JSON</p>
+                    </div>
+                    <div class="workflow-arrow">’</div>
+                    <div class="workflow-step">
+                        <div class="feature-icon">=Ê</div>
+                        <h3>3. Extract</h3>
+                        <p>Calculate financial metrics</p>
+                    </div>
+                    <div class="workflow-arrow">’</div>
+                    <div class="workflow-step">
+                        <div class="feature-icon"></div>
+                        <h3>4. Output</h3>
+                        <p>Display formatted results</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="usage" class="section">
+                <h2>=Ö Usage</h2>
+
+                <h3>Command Line Arguments</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Argument</th>
+                                <th>Short</th>
+                                <th>Type</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="inline-code">--company</span></td>
+                                <td><span class="inline-code">-c</span></td>
+                                <td>string</td>
+                                <td>aapl</td>
+                                <td>Stock symbol of company to analyze</td>
+                            </tr>
+                            <tr>
+                                <td><span class="inline-code">--year</span></td>
+                                <td><span class="inline-code">-y</span></td>
+                                <td>integer</td>
+                                <td>2025</td>
+                                <td>Year to query financial data</td>
+                            </tr>
+                            <tr>
+                                <td><span class="inline-code">--output</span></td>
+                                <td><span class="inline-code">-o</span></td>
+                                <td>string</td>
+                                <td>outputs/2025</td>
+                                <td>Output directory for filings</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Usage Examples</h3>
+
+                <div class="collapsible" onclick="toggleCollapse(this)">
+                    <span>Analyze a specific company</span>
+                    <span class="arrow">¼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="code-block">
+                        <pre><code><span class="syntax-bash">python -m financial_analysis --company msft</span></code></pre>
+                    </div>
+                </div>
+
+                <div class="collapsible" onclick="toggleCollapse(this)">
+                    <span>Analyze a specific year</span>
+                    <span class="arrow">¼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="code-block">
+                        <pre><code><span class="syntax-bash">python -m financial_analysis --company tsla --year 2023</span></code></pre>
+                    </div>
+                </div>
+
+                <div class="collapsible" onclick="toggleCollapse(this)">
+                    <span>Custom output directory</span>
+                    <span class="arrow">¼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="code-block">
+                        <pre><code><span class="syntax-bash">python -m financial_analysis -c goog -y 2024 -o ./custom_output</span></code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="api" class="section">
+                <h2>=Ú API Reference</h2>
+
+                <h3>Core Classes</h3>
+
+                <div class="card">
+                    <h3>FilingParser</h3>
+                    <p>Main class for parsing SEC filings and extracting financial data.</p>
+                    <div class="code-block" style="margin-top: 1rem;">
+                        <pre><code class="syntax-keyword">class</code> <span class="highlight">FilingParser</span>:
+    <span class="syntax-keyword">def</span> __init__(self, company: str, year: int, api_key: str):
+        <span class="syntax-string">"""
+        Initialize the filing parser.
+
+        Args:
+            company: Stock ticker symbol (e.g., 'aapl', 'msft')
+            year: Fiscal year to analyze
+            api_key: SEC API authentication key
+        """</span></code></pre>
+                    </div>
+                </div>
+
+                <h3>Data Models</h3>
+
+                <div class="collapsible" onclick="toggleCollapse(this)">
+                    <span><span class="inline-code">Income</span> - Income Statement Data</span>
+                    <span class="arrow">¼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="code-block">
+                        <pre><code><span class="syntax-keyword">class</span> <span class="highlight">Income</span>(BaseModel):
+    Revenue: dict          <span class="syntax-comment"># Net revenue and breakdown</span>
+    Costs: dict            <span class="syntax-comment"># Cost of goods sold</span>
+    GrossProfit: int       <span class="syntax-comment"># Revenue - Costs</span>
+    Operations: dict       <span class="syntax-comment"># Operating expenses</span>
+    EBITDA: int            <span class="syntax-comment"># Earnings before interest, taxes, etc.</span>
+    Expenses: dict         <span class="syntax-comment"># Other expenses</span>
+    Investments: dict      <span class="syntax-comment"># Investment income</span>
+    Debt: dict             <span class="syntax-comment"># Interest expenses</span>
+    Taxes: dict            <span class="syntax-comment"># Tax expenses</span>
+    NetIncome: int         <span class="syntax-comment"># Bottom line profit</span></code></pre>
+                    </div>
+                </div>
+
+                <div class="collapsible" onclick="toggleCollapse(this)">
+                    <span><span class="inline-code">Assets</span> - Balance Sheet Data</span>
+                    <span class="arrow">¼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="code-block">
+                        <pre><code><span class="syntax-keyword">class</span> <span class="highlight">Assets</span>(BaseModel):
+    Cash: int              <span class="syntax-comment"># Cash and equivalents</span>
+    Assets: int            <span class="syntax-comment"># Total assets</span>
+    Liabilities: int       <span class="syntax-comment"># Total liabilities</span>
+    Equity: int            <span class="syntax-comment"># Shareholder equity</span></code></pre>
+                    </div>
+                </div>
+
+                <div class="collapsible" onclick="toggleCollapse(this)">
+                    <span><span class="inline-code">StatementsOfIncome</span> - Raw Income Data</span>
+                    <span class="arrow">¼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="code-block">
+                        <pre><code><span class="syntax-keyword">class</span> <span class="highlight">StatementsOfIncome</span>(BaseModel):
+    Revenue: int
+    Costs: int
+    Operations: int
+    Debt: Optional[int]
+    Expenses: int
+    Taxes: int</code></pre>
+                    </div>
+                </div>
+
+                <h3>Utility Functions</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Function</th>
+                                <th>Description</th>
+                                <th>Returns</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="inline-code">get_income(filing, year)</span></td>
+                                <td>Extract income statement data for a specific year</td>
+                                <td>Income</td>
+                            </tr>
+                            <tr>
+                                <td><span class="inline-code">get_assets(filing, year)</span></td>
+                                <td>Extract balance sheet data for a specific year</td>
+                                <td>Assets</td>
+                            </tr>
+                            <tr>
+                                <td><span class="inline-code">get_keys(filing)</span></td>
+                                <td>Identify all relevant XBRL keys in the filing</td>
+                                <td>Keys</td>
+                            </tr>
+                            <tr>
+                                <td><span class="inline-code">get_value(data, key)</span></td>
+                                <td>Safely extract values from dict/list/string</td>
+                                <td>str</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="examples" class="section">
+                <h2>=¡ Examples</h2>
+
+                <h3>Sample Output</h3>
+                <p>Here's what the output looks like when analyzing Apple Inc.:</p>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre class="json-output"><code>{
+    <span class="syntax-string">"Revenue"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">385706000000</span>,
+        <span class="syntax-string">"SalesRevenueNet"</span>: <span class="syntax-number">385706000000</span>
+    },
+    <span class="syntax-string">"Costs"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">-214137000000</span>,
+        <span class="syntax-string">"CostOfGoodsAndServicesSold"</span>: <span class="syntax-number">-214137000000</span>
+    },
+    <span class="syntax-string">"GrossProfit"</span>: <span class="syntax-number">171569000000</span>,
+    <span class="syntax-string">"Operations"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">-24932000000</span>,
+        <span class="syntax-string">"SellingGeneralAndAdministrativeExpense"</span>: <span class="syntax-number">-24932000000</span>
+    },
+    <span class="syntax-string">"EBITDA"</span>: <span class="syntax-number">146637000000</span>,
+    <span class="syntax-string">"Expenses"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">-26251000000</span>,
+        <span class="syntax-string">"ResearchAndDevelopmentExpense"</span>: <span class="syntax-number">-26251000000</span>
+    },
+    <span class="syntax-string">"Taxes"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">-14527000000</span>,
+        <span class="syntax-string">"IncomeTaxExpense"</span>: <span class="syntax-number">-14527000000</span>
+    },
+    <span class="syntax-string">"Debt"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">-2931000000</span>,
+        <span class="syntax-string">"InterestExpense"</span>: <span class="syntax-number">-2931000000</span>
+    },
+    <span class="syntax-string">"Investments"</span>: {
+        <span class="syntax-string">"net"</span>: <span class="syntax-number">3750000000</span>,
+        <span class="syntax-string">"InvestmentIncomeNet"</span>: <span class="syntax-number">3750000000</span>
+    },
+    <span class="syntax-string">"NetIncome"</span>: <span class="syntax-number">93737000000</span>
+}</code></pre>
+                </div>
+
+                <h3>Programmatic Usage</h3>
+                <p>You can also use the library programmatically in your Python code:</p>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><code><span class="syntax-keyword">from</span> financial_analysis.filing_parser <span class="syntax-keyword">import</span> FilingParser
+<span class="syntax-keyword">from</span> financial_analysis.config <span class="syntax-keyword">import</span> SEC_API_KEY
+
+<span class="syntax-comment"># Initialize parser</span>
+parser = FilingParser(<span class="syntax-string">"aapl"</span>, <span class="syntax-number">2024</span>, SEC_API_KEY)
+
+<span class="syntax-comment"># Access income data</span>
+revenue = parser.income.Revenue[<span class="syntax-string">"net"</span>]
+net_income = parser.income.NetIncome
+gross_profit = parser.income.GrossProfit
+
+<span class="syntax-comment"># Calculate metrics</span>
+profit_margin = (net_income / revenue) * <span class="syntax-number">100</span>
+<span class="syntax-keyword">print</span>(<span class="syntax-string">f"Profit Margin: {profit_margin:.2f}%"</span>)
+
+<span class="syntax-comment"># Export to JSON</span>
+<span class="syntax-keyword">print</span>(parser.income.model_dump_json(indent=<span class="syntax-number">4</span>))</code></pre>
+                </div>
+            </section>
+
+            <section id="architecture" class="section">
+                <h2><× Architecture</h2>
+
+                <h3>Project Structure</h3>
+                <div class="code-block">
+                    <pre><code>financial-analysis/
+   financial_analysis/
+      __init__.py
+      __main__.py          <span class="syntax-comment"># CLI entry point</span>
+      config.py            <span class="syntax-comment"># Configuration and constants</span>
+      filing_parser.py     <span class="syntax-comment"># Main parsing logic</span>
+      models.py            <span class="syntax-comment"># Pydantic data models</span>
+      utils.py             <span class="syntax-comment"># Utility functions</span>
+   tests/
+      test_accuracy.py     <span class="syntax-comment"># Test suite</span>
+   outputs/                 <span class="syntax-comment"># Cached filings (JSON/HTML)</span>
+   .logs/                   <span class="syntax-comment"># Application logs</span>
+   .env                     <span class="syntax-comment"># Environment configuration</span>
+   Quickstart               <span class="syntax-comment"># Quick launch script</span></code></pre>
+                </div>
+
+                <h3>Data Flow</h3>
+                <div class="card">
+                    <p><strong>1. Query Phase:</strong> Search SEC EDGAR database for latest 10-K filing</p>
+                    <p><strong>2. Fetch Phase:</strong> Download XBRL filing data via sec-api</p>
+                    <p><strong>3. Parse Phase:</strong> Convert XBRL to JSON and identify financial statement keys</p>
+                    <p><strong>4. Extract Phase:</strong> Apply keyword matching to extract relevant metrics</p>
+                    <p><strong>5. Validate Phase:</strong> Verify data integrity with Pydantic models</p>
+                    <p><strong>6. Calculate Phase:</strong> Compute derived metrics (Gross Profit, EBITDA, Net Income)</p>
+                    <p><strong>7. Output Phase:</strong> Return structured financial data and cache locally</p>
+                </div>
+            </section>
+
+            <section id="roadmap" class="section">
+                <h2>=ú Roadmap</h2>
+
+                <div class="grid">
+                    <div class="card">
+                        <span class="status-badge status-todo">TODO</span>
+                        <h3>Comprehensive Expenses</h3>
+                        <p>Add support for more granular expense categorization and analysis.</p>
+                    </div>
+                    <div class="card">
+                        <span class="status-badge status-todo">TODO</span>
+                        <h3>Period Verification</h3>
+                        <p>Double check period alignment with year argument for accurate reporting.</p>
+                    </div>
+                    <div class="card">
+                        <span class="status-badge status-todo">PLANNED</span>
+                        <h3>Rust Implementation</h3>
+                        <p>Rebuild core parser in Rust for improved performance and independence from third-party APIs.</p>
+                    </div>
+                    <div class="card">
+                        <span class="status-badge status-todo">PLANNED</span>
+                        <h3>More Filing Types</h3>
+                        <p>Support for 10-Q quarterly reports and 8-K current reports.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resources" class="section">
+                <h2>=Ú Resources</h2>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>SEC API Python</h3>
+                        <p>Official Python wrapper for sec-api.io</p>
+                        <a href="https://github.com/janlukasschroeder/sec-api-python" style="color: var(--accent-primary);">View Repository ’</a>
+                    </div>
+                    <div class="card">
+                        <h3>XBRL Guide</h3>
+                        <p>SEC's comprehensive guide to XBRL financial reporting</p>
+                        <a href="https://www.sec.gov/files/edgar/filer-information/specifications/xbrl-guide.pdf" style="color: var(--accent-primary);">Read Guide ’</a>
+                    </div>
+                    <div class="card">
+                        <h3>Fast XBRL Parser</h3>
+                        <p>Rust-based XBRL parser for future implementation</p>
+                        <a href="https://github.com/TiesdeKok/fast_xbrl_parser/tree/master" style="color: var(--accent-primary);">View Project ’</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contributing" class="section">
+                <h2>> Contributing</h2>
+                <p>Contributions are welcome! This project aims to provide accessible financial data analysis tools for developers and researchers.</p>
+
+                <h3>Development Setup</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><code><span class="syntax-comment"># Clone the repository</span>
+<span class="syntax-bash">git clone</span> https://github.com/yourusername/financial-analysis.git
+<span class="syntax-bash">cd</span> financial-analysis
+
+<span class="syntax-comment"># Install dependencies</span>
+<span class="syntax-bash">pip install</span> -r requirements.txt
+
+<span class="syntax-comment"># Run tests</span>
+<span class="syntax-bash">pytest</span> tests/
+
+<span class="syntax-comment"># Run the CLI</span>
+<span class="syntax-bash">python -m financial_analysis</span> --help</code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built with d for financial analysis and transparency</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Powered by <a href="https://sec-api.io" style="color: var(--accent-primary);">sec-api.io</a> |
+                XBRL data from SEC EDGAR
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleCollapse(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('.arrow');
+
+            content.classList.toggle('active');
+            arrow.classList.toggle('active');
+        }
+
+        function copyCode(button) {
+            const codeBlock = button.parentElement;
+            const code = codeBlock.querySelector('code').innerText;
+
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'Copied!';
+                setTimeout(() => {
+                    button.innerText = originalText;
+                }, 2000);
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,249 +1,14 @@
-from financial_analysis.models import Keys
-from financial_analysis.models import Finances
+from financial_analysis.models import Income
+from financial_analysis.models import BalanceSheet
 import logging
 
 logger = logging.getLogger(__name__)
 
 
-def gaap_int(key: str, filing_category: dict, index: int) -> int:
-    return int(get_value(filing_category[key][index]))
-
-
-def sum_category(keys: list[str], filing_category: dict, index: int) -> int:
-    return sum(int(gaap_int(key, filing_category, index)) for key in keys)
-
-
-def get_keys(filing: dict) -> Keys:
-    debt_keys: list[str] = []
-    costs_keys: list[str] = []
-    revenue_keys: list[str] = []
-    operations_keys: list[str] = []
-    taxes_keys: list[str] = []
-    expense_keys: list[str] = []
-    for key in filing["StatementsOfIncome"].keys():
-        if "Loss" in key:
-            pass
-        elif "Cost" in key:
-            costs_keys.append(key)
-        elif "Revenue" in key:
-            revenue_keys.append(key)
-        elif "Administrative" in key:
-            operations_keys.append(key)
-        elif "Interest" in key and "Expense" in key:
-            debt_keys.append(key)
-        # elif "Interest" in key and "Income" in key:
-        #    interest_income_key = key
-        elif "Tax" in key:
-            taxes_keys.append(key)
-        elif "Expense" in key:
-            expense_keys.append(key)
-
-    assert len(costs_keys) > 0, "Costs not found"
-    assert len(revenue_keys) > 0, "Revenue not found"
-    assert len(operations_keys) > 0, "Operations not found"
-    assert len(taxes_keys) > 0, "Taxes not found"
-    assert len(expense_keys) > 0, "Expenses not found"
-
-    currency_keys: list[str] = []
-    retirement_keys: list[str] = []
-    classification_keys: list[str] = []
-    income_loss_tax_keys: list[str] = []
-    comprehensive_keys: list[str] = []
-    for key in filing["StatementsOfComprehensiveIncome"].keys():
-        if "Currency" in key:
-            currency_keys.append(key)
-        elif "etirement" in key:
-            retirement_keys.append(key)
-        elif "lassification" in key:
-            classification_keys.append(key)
-        elif "IncomeLossTax" in key:
-            income_loss_tax_keys.append(key)
-        elif "ComprehensiveIncomeNetOfTax" in key:
-            comprehensive_keys.append(key)
-
-    assert len(comprehensive_keys) > 0, "Comprehensive Income not found"
-
-    # Update to also look for NetCash in k and write it as a key if found
-    cash_flow_keys = [
-        k for k in filing["StatementsOfCashFlows"].keys() if "NetCash" in k
-    ]
-    if len(cash_flow_keys) == 0:
-        cash_flow_keys = [
-            k for k in filing["StatementsOfCashFlows"].keys() if "NetIncome" in k
-        ]
-
-    assert len(cash_flow_keys) > 0, "Cash Flow not found"
-
-    cash_keys: list[str] = []
-    assets_keys: list[str] = []
-    liabilities_keys: list[str] = []
-    equity_keys: list[str] = []
-    for key in filing["BalanceSheets"].keys():
-        if "Cash" in key:
-            cash_keys.append(key)
-        elif "Assets" in key:
-            assets_keys.append(key)
-        elif "Liabilities" in key:
-            liabilities_keys.append(key)
-        elif "Equity" in key:
-            equity_keys.append(key)
-
-    assert len(cash_keys) > 0, "Cash not found"
-    assert len(assets_keys) > 0, "Assets not found"
-    assert len(liabilities_keys) > 0, "Liabilities not found"
-
-    if len(equity_keys) == 0:
-        equity_keys = [k for k in filing["BalanceSheets"].keys() if "Treasury" in k]
-
-    assert len(equity_keys) > 0, "Equity not found"
-
-    return Keys(
-        revenue=revenue_keys,
-        costs=costs_keys,
-        operations=operations_keys,
-        debt=debt_keys,
-        taxes=taxes_keys,
-        expenses=expense_keys,
-        comprehensive_income=comprehensive_keys,
-        cash_flow=cash_flow_keys,
-        cash=cash_keys,
-        assets=assets_keys,
-        liabilities=liabilities_keys,
-        equity=equity_keys,
-    )
-
-
-def get_finances(filing: dict, index: int) -> Finances:
-    debt: int = 0
-    costs: int = 0
-    revenue: int = 0
-    operations: int = 0
-    taxes: int = 0
-    expenses: int = 0
-    investments: int = 0
-    for key in filing["StatementsOfIncome"].keys():
-        if "Loss" in key:
-            pass
-        elif "Cost" in key:
-            costs -= int(get_value(filing["StatementsOfIncome"][key][index]))
-        elif "Revenue" in key:
-            revenue += int(get_value(filing["StatementsOfIncome"][key][index]))
-        elif "Administrative" in key:
-            operations -= int(get_value(filing["StatementsOfIncome"][key][index]))
-        elif "Interest" in key and "Expense" in key:
-            debt -= int(get_value(filing["StatementsOfIncome"][key][index]))
-        elif "Tax" in key:
-            taxes -= int(get_value(filing["StatementsOfIncome"][key][index]))
-        elif "Expense" in key or "Depreciat" in key or "Restructur" in key:
-            expenses -= int(get_value(filing["StatementsOfIncome"][key][index]))
-        elif "Investment" in key:
-            investments += int(get_value(filing["StatementsOfIncome"][key][index]))
-
-    assert costs < 0, "Costs not found"
-    assert revenue > 0, "Revenue not found"
-    assert operations < 0, "Operations not found"
-    assert taxes != 0, "Taxes not found"
-
-    currency_exchange: int = 0
-    benefits: int = 0
-    reclassification: int = 0
-    income_loss_tax: int = 0
-    for key in filing["StatementsOfComprehensiveIncome"].keys():
-        try:
-            if "Currency" in key:
-                currency_exchange += int(
-                    get_value(filing["StatementsOfComprehensiveIncome"][key][index])
-                )
-            elif "etirement" in key:
-                benefits += int(
-                    get_value(filing["StatementsOfComprehensiveIncome"][key][index])
-                )
-            elif "lassification" in key:
-                reclassification -= int(
-                    get_value(filing["StatementsOfComprehensiveIncome"][key][index])
-                )
-
-            elif "IncomeLossTax" in key:
-                income_loss_tax -= int(
-                    get_value(filing["StatementsOfComprehensiveIncome"][key][index])
-                )
-        except ValueError as e:
-            logger.error(f"Error parsing reclassification: {e}, key: {key}")
-            pass
-
-        benefits = -abs(benefits)
+def get_value(data, key: str = "value") -> str:
     """
-    # Update to also look for NetCash in k and write it as a key if found
-    cash_flow: int = 0
-    cash_flow += sum(
-        int(get_value(filing["StatementsOfCashFlows"][key][index]))
-        for key in filing["StatementsOfCashFlows"].keys()
-        if "NetCash" in key
-    )
-
-    cash_flow += sum(
-        int(get_value(filing["StatementsOfCashFlows"][key][index]))
-        for key in filing["StatementsOfCashFlows"].keys()
-        if "NetIncome" in key
-    )
-
-    assert cash_flow != 0, "Cash Flow not found"
-
-    
-    cash_keys: list[str] = []
-    assets_keys: list[str] = []
-    liabilities_keys: list[str] = []
-    equity_keys: list[str] = []
-    for key in filing["BalanceSheets"].keys():
-        if "Cash" in key:
-            cash_keys.append(key)
-        elif "Assets" in key:
-            assets_keys.append(key)
-        elif "Liabilities" in key:
-            liabilities_keys.append(key)
-        elif "Equity" in key:
-            equity_keys.append(key)
-
-    assert len(cash_keys) > 0, "Cash not found"
-    assert len(assets_keys) > 0, "Assets not found"
-    assert len(liabilities_keys) > 0, "Liabilities not found"
-
-    if len(equity_keys) == 0:
-        equity_keys = [k for k in filing["BalanceSheets"].keys() if "Treasury" in k]
-
-    assert len(equity_keys) > 0, "Equity not found"
-    """
-
-    return Finances(
-        Revenue=revenue,
-        Costs=costs,
-        GrossProfit=revenue + costs,
-        Operations=operations,
-        EBITDA=revenue + costs + operations,
-        Expenses=expenses,
-        Investments=investments,
-        Debt=debt,
-        Taxes=taxes,
-        CurrencyExchange=currency_exchange,
-        Benefits=benefits,
-        Reclassification=reclassification,
-        IncomeLossTax=income_loss_tax,
-        NetIncome=revenue
-        + costs
-        + operations
-        + expenses
-        + taxes
-        + debt
-        + investments
-        + currency_exchange
-        + benefits
-        + reclassification
-        + income_loss_tax,
-    )
-
-
-"""
-Doesn't work for this scenario:
+    Helper to safely extract values from dict, list, or string.
+    Doesn't work for this scenario:
 
         "TradingSymbol": [
             {
@@ -417,13 +182,174 @@ Doesn't work for this scenario:
                 "value": "PCG-PrX"
             }
         ],
+    """
+    if isinstance(data, list):
+        data = data[0]
+
+    if isinstance(data, dict):
+        return data[key]
+
+    return data
+
+
+def get_gaap_period_int(filing_category: dict, year: int) -> int:
+    index: int = 0
+
+    index_period: int = int(filing_category[index]["period"]["endDate"][:4])
+    while index_period != year:
+        index += 1
+        index_period = int(filing_category[index]["period"]["endDate"][:4])
+
+    return int(get_value(filing_category[index]))
+
+
+def get_balance_sheet(filing: dict, index: int) -> BalanceSheet:
+    cash: int = 0
+    assets: int = 0
+    liabilities: int = 0
+    equity: int = 0
+    for key in filing["BalanceSheets"].keys():
+        if "Cash" in key:
+            cash += get_gaap_period_int(filing["BalanceSheets"][key], index)
+        elif "Assets" in key:
+            assets += get_gaap_period_int(filing["BalanceSheets"][key], index)
+        elif "Liabilities" in key:
+            liabilities += get_gaap_period_int(filing["BalanceSheets"][key], index)
+        elif "Equity" in key or "Treasury" in key:
+            equity += get_gaap_period_int(filing["BalanceSheets"][key], index)
+
+    assert cash != 0, "Cash not found"
+    assert assets != 0, "Assets not found"
+    assert liabilities != 0, "Liabilities not found"
+    assert equity != 0, "Equity not found"
+
+    return Assets(
+        Cash=cash,
+        Assets=assets,
+        Liabilities=liabilities,
+        Equity=equity,
+    )
+
+
+"""
+def get_financials(filing: dict, index: int) -> Financials:
+    financials: Financials = Financials()
+    for key in filing["Financials"].keys():
+        if "Revenue" in key:
+            financials.Revenue[key] = get_gaap_period_int(
+                filing["Financials"][key], index
+            )
+            financials.Revenue["net"] += financials.Revenue[key]
+        elif "Costs" in key:
+            financials.Costs[key] = -abs(
+                get_gaap_period_int(filing["Financials"][key], index)
+            )
+            financials.Costs["net"] += financials.Costs[key]
 """
 
+def get_income(filing: dict, index: int) -> Income:
+    income: Income = Income()
+    for key in filing["StatementsOfIncome"].keys():
+        if "Loss" in key:
+            pass
+        elif "CostOf" in key:
+            income.Costs[key] = -abs(
+                get_gaap_period_int(filing["StatementsOfIncome"][key], index)
+            )
+            income.Costs["net"] += income.Costs[key]
+        elif "Revenue" in key:
+            income.Revenue[key] = get_gaap_period_int(
+                filing["StatementsOfIncome"][key], index
+            )
+            income.Revenue["net"] += income.Revenue[key]
+        elif "Administrative" in key:
+            income.Operations[key] = -abs(
+                get_gaap_period_int(filing["StatementsOfIncome"][key], index)
+            )
+            income.Operations["net"] += income.Operations[key]
+        elif "Interest" in key and "Expense" in key:
+            income.Debt[key] = -abs(
+                get_gaap_period_int(filing["StatementsOfIncome"][key], index)
+            )
+            income.Debt["net"] += income.Debt[key]
+        elif "Tax" in key:
+            income.Taxes[key] = -abs(
+                get_gaap_period_int(filing["StatementsOfIncome"][key], index)
+            )
+            income.Taxes["net"] += income.Taxes[key]
+        elif any(term in key for term in income.Expenses["keywords"]):
+            income.Expenses[key] = -abs(
+                get_gaap_period_int(filing["StatementsOfIncome"][key], index)
+            )
+            if "Income" in key:
+                income.Expenses["net"] -= income.Expenses[key]
+            else:
+                income.Expenses["net"] += income.Expenses[key]
+        elif "Investment" in key:
+            income.Investments[key] = abs(
+                get_gaap_period_int(filing["StatementsOfIncome"][key], index)
+            )
+            income.Investments["net"] += income.Investments[key]
 
-def get_value(data) -> str:
-    """Helper to safely extract values from dict, list, or string."""
-    return (
-        data["value"]
-        if isinstance(data, dict)
-        else (data[0] if isinstance(data, list) else data)
-    )
+    assert income.Costs["net"] <= 0, "Costs can't be positive income"
+    assert income.Revenue["net"] > 0, "Revenue can't be negative income"
+    assert income.Operations["net"] <= 0, "Operations can't be positive income"
+    assert income.Taxes["net"] != 0, "Taxes not found"
+
+    # Check if filing contains the key StatementsOfComprehensiveIncome
+    if "StatementsOfComprehensiveIncome" not in filing:
+        return income
+
+    for key in filing["StatementsOfComprehensiveIncome"].keys():
+        try:
+            if "Currency" in key:
+                income.CurrencyExchange[key] = get_gaap_period_int(
+                    filing["StatementsOfComprehensiveIncome"][key], index
+                )
+                income.CurrencyExchange["net"] += income.CurrencyExchange[key]
+            elif "etirement" in key:
+                income.Benefits[key] = get_gaap_period_int(
+                    filing["StatementsOfComprehensiveIncome"][key], index
+                )
+                income.Benefits["net"] += income.Benefits[key]
+            elif "lassification" in key:
+                income.Reclassification[key] = -abs(
+                    get_gaap_period_int(
+                        filing["StatementsOfComprehensiveIncome"][key], index
+                    )
+                )
+                income.Reclassification["net"] += income.Reclassification[key]
+            elif "IncomeLossTax" in key:
+                income.IncomeLossTax[key] = abs(
+                    get_gaap_period_int(
+                        filing["StatementsOfComprehensiveIncome"][key], index
+                    )
+                )
+                income.IncomeLossTax["net"] += income.IncomeLossTax[key]
+        except ValueError as e:
+            logger.error(f"Error parsing reclassification: {e}, key: {key}")
+            pass
+
+        income.Benefits["net"] = -abs(income.Benefits["net"])
+
+        income.GrossProfit = income.Revenue["net"] + income.Costs["net"]
+        income.EBITDA = income.GrossProfit + income.Operations["net"]
+        income.NetIncome = (
+            income.Revenue["net"]
+            + income.Costs["net"]
+            + income.Operations["net"]
+            + income.Expenses["net"]
+            + income.Taxes["net"]
+            + income.Debt["net"]
+            + income.Investments["net"]
+            + income.CurrencyExchange["net"]
+            + income.Benefits["net"]
+            + income.Reclassification["net"]
+            + income.IncomeLossTax["net"]
+        )
+
+    return income
+
+
+def get_finances(filing: dict, index: int) -> Income:
+    return get_income(filing, index)

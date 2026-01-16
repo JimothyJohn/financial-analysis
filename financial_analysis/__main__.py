@@ -2,8 +2,8 @@ import os
 import argparse
 import logging
 from financial_analysis.filing_parser import FilingParser
-from financial_analysis.utils import get_finances
 from financial_analysis.config import SEC_API_KEY
+from financial_analysis.models import Income
 
 # Writes log files toa folde rcalled .logs/
 logging.basicConfig(
@@ -32,48 +32,49 @@ parser.add_argument(
 
 
 def main(company: str = "aapl", year: int = 2025, output: str = "outputs/2025") -> None:
-    if os.path.exists(f"{output}/{company} 10-k.json"):
-        logger.info(
-            "\tINEFFICIENT: JSON already extracted, downloading new one though...\n"
-        )
-        # exit()
-
     if company == "aapl":
         logger.info("\tRunning for Apple Computer Company Inc\n")
 
     filing_parser = FilingParser(company, year, SEC_API_KEY)
 
-    finances = get_finances(filing_parser.filing, filing_parser.index)
+    # Print all values except those that have a net of 0 and format the value like a currency
+    print("\n\t2025\n")
+    for key, value in filing_parser.income.model_dump().items():
+        if isinstance(value, int):
+            if value != 0:
+                print(f"\t{key}\n\t${value:,}")
+            continue
 
-    print(finances)
-    return  # Changed from exit() to allow testing
+        if value.get("net") != 0:
+            print(f"\t{key}\n\t${value['net']:,}\n")
 
-    soi = filing_parser.Filing.StatementsOfIncome
-    debt = 0
-    if soi.Debt:
-        debt = soi.Debt
+    # print(filing_parser.income.model_dump_json(indent=4))
 
-    print(
-        f"\n\tIn {args.year}, {args.company.upper()} made ${filing_parser.Filing.StatementsOfComprehensiveIncome.ComprehensiveIncome:,.0f}:\n"
-    )
-    print(f"\t${soi.Revenue:,.0f}\t\tRevenue")
-    print(f"\t-${soi.Costs:,.0f}\t\tCOGS")
-    print(f"\t${soi.Revenue - soi.Costs:,.0f}\t\tGross Profit")
-    print(f"\t-${soi.Operations:,.0f}\t\tOperations")
-    print(f"\t${soi.Revenue - soi.Costs - soi.Operations:,.0f}\t\tEBIDTA")
-    print(f"\t-${soi.Expenses:,.0f}\t\tOther Expenses")
-    print(f"\t-${soi.Taxes:,.0f}\t\tTaxes")
-    print(f"\t-${debt:,.0f}\t\tDebt")
-    print(
-        f"\t${soi.Revenue - soi.Costs - soi.Operations - soi.Expenses - soi.Taxes - debt:,.0f}\t\tNet Income\n"
-    )
+def get_keywords(financeModel):
+    for field in financeModel.model_fields:
+        print(field)
 
-    print(f"\t${filing_parser.Filing.BalanceSheets.Cash:,.0f}\t\tCash")
-    print(f"\t${filing_parser.Filing.BalanceSheets.Assets:,.0f}\t\tAssets")
-    print(f"\t${filing_parser.Filing.BalanceSheets.Equity:,.0f}\t\tEquity")
+    # Put the keywords from the Income fields into a list
+    return [
+        keyword
+        for val in income.model_dump().values()
+        if isinstance(val, dict) and "keywords" in val
+        for keyword in val["keywords"]
+    ]
 
+def get_values(filingCategory: dict, index: int) -> any:
+    keywords = get_keywords()
 
+    for key in filingCategory.keys():
+        for field in keywords:
+            if field.name == key:
+                return filingCategory[key][index]
+
+    return None
+
+    
 if __name__ == "__main__":
+    income: Income = Income()
+    get_keywords(income)
     args: argparse.Namespace = parser.parse_args()
-    logger.info("")
     main(args.company.lower(), args.year, args.output)
