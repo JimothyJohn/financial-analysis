@@ -1,10 +1,10 @@
 # Scope of Project
 
-This project ingest SEC filings, specifically 10-K's as JSON and serializes and summarizes the financial data for analysis.
+This project ingests SEC filings, specifically 10-K's, in JSON format and serializes then summarizes the financial data.
 
 ## Language
 
-The language of choice is Rust. There should be no dependencies if possible, besides dev dependencies. 
+The language of choice is Rust. This is due to it's performance (which is honestly unnecessary for this scale of project) and progammability. It was previous built in Python, see [financial_anlaysis/](financial_anlaysis/). 
 
 ## Reference Material
 
@@ -12,16 +12,20 @@ The Python project in [financial_anlaysis/](financial_anlaysis/) can be used as 
 
 ## Readability
 
-The code should be readable and maintainable. The code should be easy to understand and follow. The code should be easy to debug and maintain. The code should be easy to scale and maintain.
+The code should be easily:
+
+- Readable
+- Understandable
+- Debuggable
+- Maintable
+- Formatted
+- Tested
+- Scalable
 
 ## Implementation
 
-All functions should have a referred test in the same file as the program as per I understand Rust best practice.
+All functions should have a corresponding test in the same file as the program as per I understand Rust best practice.
 
 ## Guidance
 
-Frequently ask for feedback as you go along function by function and piece by piece.
-
-## Fun
-
-You are racing the user building the program in src/main.rs. Yours should be main-ai.rs so that they can be distignuished. You're welcome to create as many associated, modular files of independent or helpful functions that I could possible also utilize in my main.rs file.
+Frequently ask for feedback and do not create any code until you deeply understand what's wanted by the user.
