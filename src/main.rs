@@ -1,5 +1,5 @@
 use clap::Parser;
-use src::app::app;
+use financial_analysis::app::app;
 
 use log::info;
 
@@ -22,6 +22,8 @@ fn main() {
         .init();
 
     let args = Args::parse();
+    financial_analysis::config::init(args.company.clone(), args.year);
+
     info!("🚀 Starting Financial Analysis for {} ({})", args.company, args.year);
     
     app(args.company, args.year);

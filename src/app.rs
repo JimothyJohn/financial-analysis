@@ -5,7 +5,7 @@ use log::{info, warn, error};
 // Create function with default year of 2025
 pub fn app(symbol: String, year: i32) {
     let mut income = Income::default();
-    let json_path = format!("./outputs/{year}/{symbol}_10-k.json");
+    let json_path = format!("./outputs/2025/{symbol}_10-k.json");
     
     info!("📂 Loading JSON from: {}", json_path);
     
@@ -53,4 +53,25 @@ pub fn app(symbol: String, year: i32) {
         },
         Err(e) => error!("❌ Failed to create output file: {}", e),
     }
+
+    match symbol == "ait" && year == 2025 {
+        true => {
+            // Assert this instead to save lines of code
+            assert_eq!(income.revenue.net.value, 4563424000);
+            assert_eq!(income.costs.net.value, -3180265000);
+            assert_eq!(income.operations.net.value, -884630000);
+            assert_eq!(income.expenses.net.value, 3050000);
+            assert_eq!(income.investments.net.value, 17602000);
+            assert_eq!(income.debt.net.value, -18214000);
+            assert_eq!(income.taxes.net.value, -107979000);
+            assert_eq!(income.currency_exchange.net.value, -1655000);
+            assert_eq!(income.benefits.net.value, -67000);
+            assert_eq!(income.reclassification.net.value, -16481000);
+            assert_eq!(income.income_loss_tax.net.value, 4083000);
+            assert_eq!(income.gross_profit(), 1383159000);
+            assert_eq!(income.ebitda(), 498529000);
+        }
+        false => (),
+    }
+    println!("Net Income: {}", income.net_income());
 }

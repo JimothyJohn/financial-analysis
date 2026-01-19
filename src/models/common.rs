@@ -1,18 +1,21 @@
 use serde_json::Value;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use log::{debug, info};
+use log::{debug};
 use chrono::{Datelike, NaiveDate};
-use serde::de::Deserializer;
+use serde::de::{Deserializer, IntoDeserializer};
 
 fn deserialize_from_str<'de, D, T>(deserializer: D) -> Result<T, D::Error>
 where
     D: Deserializer<'de>,
-    T: std::str::FromStr,
+    T: std::str::FromStr + Deserialize<'de>,
     T::Err: std::fmt::Display,
 {
-    let s: String = Deserialize::deserialize(deserializer)?;
-    s.parse::<T>().map_err(serde::de::Error::custom)
+    let v: Value = Deserialize::deserialize(deserializer)?;
+    match v {
+        Value::String(s) => s.parse::<T>().map_err(serde::de::Error::custom),
+        _ => T::deserialize(v.into_deserializer()).map_err(serde::de::Error::custom),
+    }
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -42,6 +45,7 @@ pub struct MetricValue {
     pub period: Period,
     #[serde(deserialize_with = "deserialize_from_str")]
     pub value: i64,
+    
 }
 
 impl Default for MetricValue {
@@ -62,6 +66,7 @@ impl MetricValue {
             unit_ref: String::from("usd"),
             period: Period::default(),
             value: 0,
+            
         }
     }
 }
@@ -97,6 +102,7 @@ pub struct Metric {
     pub breakdown: HashMap<String, MetricValue>,
     // #[serde(skip)]
     pub keywords: Keywords,
+    pub positive: bool,
 }
 
 // set the initial value of net to 0 and the keywords to an empty list
@@ -106,16 +112,18 @@ impl Default for Metric {
             net: MetricValue::default(),
             breakdown: HashMap::new(),
             keywords: Keywords::default(),
+            positive: true
         }
     }
 }
 
 impl Metric {
-    pub fn new(keywords: Keywords) -> Self {
+    pub fn new(keywords: Keywords, positive: bool) -> Self {
         Metric {
             net: MetricValue::new(),
             breakdown: HashMap::new(),
             keywords: keywords,
+            positive: positive,
         }
     }
 
@@ -151,9 +159,7 @@ impl Metric {
                     if item.get("segment").is_none() {
                         // Try to deserialize directly into MetricValue
                         if let Ok(metric_val) = serde_json::from_value::<MetricValue>(item.clone()) {
-                            info!("Matched key '{}' with keyword '{}', adding {}", key, keyword, metric_val.value);
-                            // Example: Check if the year matches expectation (e.g. 2025)
-                            if metric_val.period.end_date.year() != 2025 {
+                            if metric_val.period.end_date.year() != crate::config::get().year {
                                 continue;
                             }
                             // See if this could be done earlier
@@ -162,7 +168,11 @@ impl Metric {
                             self.net.decimals = metric_val.decimals;
                             initialized = true;
                             }
-                            self.net.value += metric_val.value;
+                            if self.positive {
+                                self.net.value += metric_val.value.abs();
+                            } else {
+                                self.net.value -= metric_val.value.abs();
+                            }
                             
                             // Update to utilize a MetricValue
                             let val = metric_val.value;
@@ -173,6 +183,7 @@ impl Metric {
                     }
                 }
             }
+            break;
         }
             }
         }
