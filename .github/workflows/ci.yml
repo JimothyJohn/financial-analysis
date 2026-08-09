@@ -1,0 +1,40 @@
+# Baseline CI (Rust — the project's language of choice per SCOPE_RUST.md; the
+# Python tree in financial_analysis/ is reference material for the rewrite and
+# its tests require a live SEC_API_KEY, so it is not gated here).
+# The `gate` job name is the required status check that branch protection on
+# `dev` and the automerge workflow rely on: if you rename the job or add jobs,
+# update the protection rule's contexts to match.
+# SHA-pinned actions only (house rule); Dependabot's github-actions ecosystem
+# keeps the pins fresh.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, dev]
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: dtolnay/rust-toolchain@2c7215f132e9ebf062739d9130488b56d53c060c # stable
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Format check
+        run: cargo fmt --all --check
+      - name: Clippy (deny warnings)
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: Test workspace
+        run: cargo test --workspace --locked

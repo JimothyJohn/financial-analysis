@@ -1,9 +1,9 @@
-use serde_json::Value;
-use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
-use log::{debug};
 use chrono::{Datelike, NaiveDate};
+use log::debug;
 use serde::de::{Deserializer, IntoDeserializer};
+use serde::{Deserialize, Serialize};
+use serde_json::Value;
+use std::collections::HashMap;
 
 fn deserialize_from_str<'de, D, T>(deserializer: D) -> Result<T, D::Error>
 where
@@ -45,7 +45,6 @@ pub struct MetricValue {
     pub period: Period,
     #[serde(deserialize_with = "deserialize_from_str")]
     pub value: i64,
-    
 }
 
 impl Default for MetricValue {
@@ -66,7 +65,6 @@ impl MetricValue {
             unit_ref: String::from("usd"),
             period: Period::default(),
             value: 0,
-            
         }
     }
 }
@@ -112,7 +110,7 @@ impl Default for Metric {
             net: MetricValue::default(),
             breakdown: HashMap::new(),
             keywords: Keywords::default(),
-            positive: true
+            positive: true,
         }
     }
 }
@@ -122,13 +120,12 @@ impl Metric {
         Metric {
             net: MetricValue::new(),
             breakdown: HashMap::new(),
-            keywords: keywords,
-            positive: positive,
+            keywords,
+            positive,
         }
     }
 
     pub fn update(&mut self, key: &str, data: &Value) {
-        
         // If period and decimals
         let mut initialized = false;
         // Check if the key matches any keyword
@@ -137,9 +134,12 @@ impl Metric {
             if keyword.is_empty() {
                 continue;
             }
-            
-            debug!("Checking if key '{}' contains BAD keyword '{}'", key, keyword);
-            
+
+            debug!(
+                "Checking if key '{}' contains BAD keyword '{}'",
+                key, keyword
+            );
+
             // Exit loop if any bad keyword is found
             if key.contains(keyword) {
                 return;
@@ -150,43 +150,49 @@ impl Metric {
             if keyword.is_empty() {
                 continue;
             }
-            debug!("Checking if key '{}' contains GOOD keyword '{}'", key, keyword);
+            debug!(
+                "Checking if key '{}' contains GOOD keyword '{}'",
+                key, keyword
+            );
             // Extract value
             if key.contains(keyword) {
-            if let Some(array) = data.as_array() {
-                for item in array {
-                    // Simple filter: avoid segments for now if possible, or just take everything
-                    if item.get("segment").is_none() {
-                        // Try to deserialize directly into MetricValue
-                        if let Ok(metric_val) = serde_json::from_value::<MetricValue>(item.clone()) {
-                            if metric_val.period.end_date.year() != crate::config::get().year {
-                                continue;
+                if let Some(array) = data.as_array() {
+                    for item in array {
+                        // Simple filter: avoid segments for now if possible, or just take everything
+                        if item.get("segment").is_none() {
+                            // Try to deserialize directly into MetricValue
+                            if let Ok(metric_val) =
+                                serde_json::from_value::<MetricValue>(item.clone())
+                            {
+                                if metric_val.period.end_date.year() != crate::config::get().year {
+                                    continue;
+                                }
+                                // See if this could be done earlier
+                                if !initialized {
+                                    self.net.period = metric_val.period.clone();
+                                    self.net.decimals = metric_val.decimals;
+                                    initialized = true;
+                                }
+                                if self.positive {
+                                    self.net.value += metric_val.value.abs();
+                                } else {
+                                    self.net.value -= metric_val.value.abs();
+                                }
+
+                                // Update to utilize a MetricValue
+                                let val = metric_val.value;
+                                self.breakdown
+                                    .entry(key.to_string())
+                                    .and_modify(|e| e.value += val)
+                                    .or_insert(metric_val);
                             }
-                            // See if this could be done earlier
-                            if !initialized {
-                            self.net.period = metric_val.period.clone();
-                            self.net.decimals = metric_val.decimals;
-                            initialized = true;
-                            }
-                            if self.positive {
-                                self.net.value += metric_val.value.abs();
-                            } else {
-                                self.net.value -= metric_val.value.abs();
-                            }
-                            
-                            // Update to utilize a MetricValue
-                            let val = metric_val.value;
-                            self.breakdown.entry(key.to_string())
-                                .and_modify(|e| e.value += val)
-                                .or_insert(metric_val);
                         }
                     }
                 }
-            }
-            break;
-        }
+                break;
             }
         }
+    }
 
     // add all of the breakdown values into the net value of Metric
     pub fn sum(&mut self) {

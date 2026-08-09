@@ -1,7 +1,6 @@
+use crate::models::common::{Keywords, Metric};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
-use crate::models::common::{Metric, Keywords};
-
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Income {
@@ -39,7 +38,15 @@ impl Income {
         self.gross_profit() + self.operations.net.value
     }
     pub fn net_income(&self) -> i64 {
-        self.ebitda() + self.expenses.net.value + self.investments.net.value + self.debt.net.value + self.taxes.net.value + self.currency_exchange.net.value + self.benefits.net.value + self.reclassification.net.value + self.income_loss_tax.net.value
+        self.ebitda()
+            + self.expenses.net.value
+            + self.investments.net.value
+            + self.debt.net.value
+            + self.taxes.net.value
+            + self.currency_exchange.net.value
+            + self.benefits.net.value
+            + self.reclassification.net.value
+            + self.income_loss_tax.net.value
     }
 }
 
@@ -49,17 +56,40 @@ impl Default for Income {
             revenue: Metric::new(Keywords::new(vec!["Revenue"], vec![]), true),
             costs: Metric::new(Keywords::new(vec!["CostOf"], vec![]), false),
             operations: Metric::new(Keywords::new(vec!["Administrative"], vec!["Tax"]), false),
-            expenses: Metric::new(Keywords::new(vec!["Expense", "Depreciat", "Restructur"], vec!["Tax", "Administrative", "Interest", "Net", "OperatingExpenses"]), true),
-            investments: Metric::new(Keywords::new(vec!["Investment", "Dividend"], vec!["Tax"]), true),
-            debt: Metric::new(Keywords::new(vec!["Interest"], vec!["Tax", "Investment"]), false),
-            taxes: Metric::new(Keywords::new(vec!["Tax"], vec!["Comprehensive", "Revenue", "Operations"]), false),
+            expenses: Metric::new(
+                Keywords::new(
+                    vec!["Expense", "Depreciat", "Restructur"],
+                    vec![
+                        "Tax",
+                        "Administrative",
+                        "Interest",
+                        "Net",
+                        "OperatingExpenses",
+                    ],
+                ),
+                true,
+            ),
+            investments: Metric::new(
+                Keywords::new(vec!["Investment", "Dividend"], vec!["Tax"]),
+                true,
+            ),
+            debt: Metric::new(
+                Keywords::new(vec!["Interest"], vec!["Tax", "Investment"]),
+                false,
+            ),
+            taxes: Metric::new(
+                Keywords::new(vec!["Tax"], vec!["Comprehensive", "Revenue", "Operations"]),
+                false,
+            ),
             currency_exchange: Metric::new(Keywords::new(vec!["Currency"], vec![]), false),
             benefits: Metric::new(Keywords::new(vec!["etirement"], vec![]), false),
-            reclassification: Metric::new(Keywords::new(vec!["lassification"], vec!["Benefit"]), false),
+            reclassification: Metric::new(
+                Keywords::new(vec!["lassification"], vec!["Benefit"]),
+                false,
+            ),
             income_loss_tax: Metric::new(Keywords::new(vec!["IncomeLossTax"], vec![]), true),
         }
     }
-
 }
 
 #[derive(Debug, Serialize, Deserialize)]
