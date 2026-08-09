@@ -120,8 +120,8 @@ impl Metric {
         Metric {
             net: MetricValue::new(),
             breakdown: HashMap::new(),
-            keywords: keywords,
-            positive: positive,
+            keywords,
+            positive,
         }
     }
 

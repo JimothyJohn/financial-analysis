@@ -1,0 +1,3701 @@
+{
+    "CoverPage": {
+        "DocumentType": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "10-K"
+            }
+        ],
+        "DocumentAnnualReport": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "true"
+            }
+        ],
+        "DocumentPeriodEndDate": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "2025-06-30"
+            }
+        ],
+        "DocumentTransitionReport": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "false"
+            }
+        ],
+        "EntityFileNumber": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "1-2299"
+            }
+        ],
+        "EntityRegistrantName": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "APPLIED INDUSTRIAL TECHNOLOGIES, INC."
+            }
+        ],
+        "EntityIncorporationStateCountryCode": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "OH"
+            }
+        ],
+        "EntityTaxIdentificationNumber": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "34-0117420"
+            }
+        ],
+        "EntityAddressAddressLine1": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "1 Applied Plaza"
+            }
+        ],
+        "EntityAddressCityOrTown": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Cleveland"
+            }
+        ],
+        "EntityAddressStateOrProvince": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "OH"
+            }
+        ],
+        "EntityAddressPostalZipCode": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "44115"
+            }
+        ],
+        "CityAreaCode": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "216"
+            }
+        ],
+        "LocalPhoneNumber": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "426-4000"
+            }
+        ],
+        "Security12bTitle": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Common Stock, without par value"
+            }
+        ],
+        "TradingSymbol": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "AIT"
+            }
+        ],
+        "SecurityExchangeName": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "NYSE"
+            }
+        ],
+        "EntityWellKnownSeasonedIssuer": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Yes"
+            }
+        ],
+        "EntityVoluntaryFilers": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "No"
+            }
+        ],
+        "EntityCurrentReportingStatus": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Yes"
+            }
+        ],
+        "EntityInteractiveDataCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Yes"
+            }
+        ],
+        "EntityFilerCategory": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Large Accelerated Filer"
+            }
+        ],
+        "EntitySmallBusiness": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "false"
+            }
+        ],
+        "EntityEmergingGrowthCompany": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "false"
+            }
+        ],
+        "IcfrAuditorAttestationFlag": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "true"
+            }
+        ],
+        "DocumentFinStmtErrorCorrectionFlag": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "false"
+            }
+        ],
+        "EntityShellCompany": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "false"
+            }
+        ],
+        "EntityPublicFloat": [
+            {
+                "period": {
+                    "startDate": "2024-12-31",
+                    "endDate": "2024-12-31",
+                    "instant": "2024-12-31"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "9109716000"
+            }
+        ],
+        "EntityCommonStockSharesOutstanding": [
+            {
+                "period": {
+                    "startDate": "2025-08-01",
+                    "endDate": "2025-08-01",
+                    "instant": "2025-08-01"
+                },
+                "decimals": "0",
+                "unitRef": "shares",
+                "value": "37752947"
+            }
+        ],
+        "EntityCentralIndexKey": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "0000109563"
+            }
+        ],
+        "CurrentFiscalYearEndDate": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "--06-30"
+            }
+        ],
+        "DocumentFiscalYearFocus": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "2025"
+            }
+        ],
+        "DocumentFiscalPeriodFocus": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "FY"
+            }
+        ],
+        "AmendmentFlag": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "false"
+            }
+        ],
+        "AuditorName": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Deloitte & Touche LLP"
+            }
+        ],
+        "AuditorFirmId": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "34"
+            }
+        ],
+        "AuditorLocation": [
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "value": "Cleveland, Ohio"
+            }
+        ]
+    },
+    "StatementsOfIncome": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4479406000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4412794000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4563424000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:US"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2540427000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:US"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1391762000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "country:US"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3932189000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:CA"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "310210000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:CA"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "country:CA"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "310210000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "ait:OtherCountriesMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "205918000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "ait:OtherCountriesMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "31089000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "ait:OtherCountriesMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "237007000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3056555000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1422851000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:OperatingSegmentsMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3059363000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:OperatingSegmentsMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1472617000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:ConsolidationItemsAxis",
+                    "value": "us-gaap:OperatingSegmentsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4531980000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:IntersegmentEliminationMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2808000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:IntersegmentEliminationMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "49766000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:ConsolidationItemsAxis",
+                    "value": "us-gaap:IntersegmentEliminationMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "52574000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:US"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2441281000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:US"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1419140000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "country:US"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3860421000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:CA"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "315499000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:CA"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "country:CA"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "315499000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "ait:OtherCountriesMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "210062000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "ait:OtherCountriesMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "26812000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "ait:OtherCountriesMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "236874000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2966842000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1445952000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:OperatingSegmentsMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2969494000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:OperatingSegmentsMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1491750000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:ConsolidationItemsAxis",
+                    "value": "us-gaap:OperatingSegmentsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4461244000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:IntersegmentEliminationMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2652000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:IntersegmentEliminationMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "45798000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:ConsolidationItemsAxis",
+                    "value": "us-gaap:IntersegmentEliminationMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "48450000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:US"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2524036000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:US"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1476918000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "country:US"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4000954000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:CA"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "296661000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "country:CA"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "country:CA"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "296661000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "ait:OtherCountriesMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "193651000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:StatementGeographicalAxis",
+                        "value": "ait:OtherCountriesMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "72158000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:StatementGeographicalAxis",
+                    "value": "ait:OtherCountriesMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "265809000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3014348000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1549076000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:OperatingSegmentsMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3017254000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:OperatingSegmentsMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1601211000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:ConsolidationItemsAxis",
+                    "value": "us-gaap:OperatingSegmentsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "4618465000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:IntersegmentEliminationMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:ServiceCenterSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2906000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": [
+                    {
+                        "dimension": "srt:ConsolidationItemsAxis",
+                        "value": "us-gaap:IntersegmentEliminationMember"
+                    },
+                    {
+                        "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                        "value": "ait:EngineeredSolutionsSegmentMember"
+                    }
+                ],
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "52135000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "srt:ConsolidationItemsAxis",
+                    "value": "us-gaap:IntersegmentEliminationMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "55041000"
+            }
+        ],
+        "CostOfGoodsAndServicesSold": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3142753000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3125829000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3180265000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2173085000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "969668000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2120467000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1005362000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2135158000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1045107000"
+            }
+        ],
+        "GrossProfit": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1336653000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1286965000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1383159000"
+            }
+        ],
+        "SellingGeneralAndAdministrativeExpense": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "840830000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "813814000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "884630000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "486476000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "272074000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "475793000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "265134000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "485720000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "315231000"
+            }
+        ],
+        "OperatingIncomeLoss": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "495823000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "473151000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "498529000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "396994000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "181109000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ReportableSegmentsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "578103000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "370582000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "175456000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ReportableSegmentsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "546038000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "393470000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "188738000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ReportableSegmentsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "582208000"
+            }
+        ],
+        "InterestExpense": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "20544000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "24790000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "18214000"
+            }
+        ],
+        "InvestmentIncomeInterestAndDividend": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "17713000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3151000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "17602000"
+            }
+        ],
+        "OtherNonoperatingIncomeExpense": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "5138000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-1701000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3050000"
+            }
+        ],
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "498130000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "449811000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "500967000"
+            }
+        ],
+        "IncomeTaxExpenseBenefit": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "112368000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "103072000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "107979000"
+            }
+        ],
+        "NetIncomeLoss": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "385762000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "346739000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "392988000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "385762000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "346739000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "392988000"
+            }
+        ],
+        "EarningsPerShareBasic": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "2",
+                "unitRef": "usdPerShare",
+                "value": "9.98"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "2",
+                "unitRef": "usdPerShare",
+                "value": "8.98"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "2",
+                "unitRef": "usdPerShare",
+                "value": "10.26"
+            }
+        ],
+        "EarningsPerShareDiluted": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "2",
+                "unitRef": "usdPerShare",
+                "value": "9.83"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "2",
+                "unitRef": "usdPerShare",
+                "value": "8.84"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "2",
+                "unitRef": "usdPerShare",
+                "value": "10.12"
+            }
+        ]
+    },
+    "StatementsOfComprehensiveIncome": {
+        "NetIncomeLoss": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "385762000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "346739000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "392988000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "385762000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "346739000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "392988000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentBeforeTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-12544000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "7723000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-1655000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossPensionAndOtherPostretirementBenefitPlansNetUnamortizedGainLossArisingDuringPeriodBeforeTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-134000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "405000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-42000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossFinalizationOfPensionAndNonPensionPostretirementPlanValuationBeforeTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1031000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            }
+        ],
+        "OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIPensionAndOtherPostretirementBenefitPlansBeforeTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-117000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "36000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-25000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationAndTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "5958000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "18174000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-357000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossCashFlowHedgeGainLossReclassificationBeforeTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "18683000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "7285000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "16124000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossBeforeTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-25520000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "20084000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-18203000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-3250000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3085000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-4083000"
+            }
+        ],
+        "OtherComprehensiveIncomeLossNetOfTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-22270000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "16999000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-14120000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-22270000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-22270000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "16999000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "16999000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-14120000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-14120000"
+            }
+        ],
+        "ComprehensiveIncomeNetOfTax": [
+            {
+                "period": {
+                    "startDate": "2023-07-01",
+                    "endDate": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "363492000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-07-01",
+                    "endDate": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "363738000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-07-01",
+                    "endDate": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "378868000"
+            }
+        ]
+    },
+    "BalanceSheets": {
+        "CashCashEquivalentsAndShortTermInvestments": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "460617000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "388417000"
+            }
+        ],
+        "AccountsReceivableNetCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "724878000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "769699000"
+            }
+        ],
+        "InventoryNet": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "488258000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "505337000"
+            }
+        ],
+        "OtherAssetsCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "96148000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "84020000"
+            }
+        ],
+        "AssetsCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1769901000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1747473000"
+            }
+        ],
+        "Land": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "14160000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "14083000"
+            }
+        ],
+        "BuildingsAndImprovementsGross": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "115262000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "116733000"
+            }
+        ],
+        "PropertyPlantAndEquipmentOther": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "233745000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "253354000"
+            }
+        ],
+        "PropertyPlantAndEquipmentGross": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "363167000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "384170000"
+            }
+        ],
+        "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "244640000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "256016000"
+            }
+        ],
+        "PropertyPlantAndEquipmentNet": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "118527000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "128154000"
+            }
+        ],
+        "OperatingLeaseRightOfUseAsset": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "133289000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "188654000"
+            }
+        ],
+        "IntangibleAssetsNetExcludingGoodwill": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "245870000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "348600000"
+            }
+        ],
+        "Goodwill": [
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "578418000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "619395000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "699374000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "211231000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "367187000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "219574000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "399821000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "221706000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "477668000"
+            }
+        ],
+        "OtherAssetsNoncurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "64928000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "63289000"
+            }
+        ],
+        "Assets": [
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2743332000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2951910000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3175544000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1736393000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1006939000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1865269000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1086641000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:ServiceCenterSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1765631000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementBusinessSegmentsAxis",
+                    "value": "ait:EngineeredSolutionsSegmentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1409913000"
+            }
+        ],
+        "AccountsPayableCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "266949000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "280124000"
+            }
+        ],
+        "LongTermDebtCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "25055000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            }
+        ],
+        "EmployeeRelatedLiabilitiesCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "93204000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "99630000"
+            }
+        ],
+        "OtherLiabilitiesCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "115892000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "146397000"
+            }
+        ],
+        "LiabilitiesCurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "501100000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "526151000"
+            }
+        ],
+        "LongTermDebtNoncurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "572279000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "572300000"
+            }
+        ],
+        "OtherLiabilitiesNoncurrent": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "189750000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "232573000"
+            }
+        ],
+        "Liabilities": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1263129000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1331024000"
+            }
+        ],
+        "PreferredStockValue": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "0"
+            }
+        ],
+        "PreferredStockSharesAuthorized": [
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "2500000"
+            }
+        ],
+        "CommonStockValue": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "10000000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "10000000"
+            }
+        ],
+        "CommonStockSharesAuthorized": [
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "80000000"
+            }
+        ],
+        "CommonStockSharesIssued": [
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "54213000"
+            }
+        ],
+        "CommonStockSharesOutstanding": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "38409000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "37868000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "38499000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "38657000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "38409000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "37868000"
+            }
+        ],
+        "AdditionalPaidInCapitalCommonStock": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "193778000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "198970000"
+            }
+        ],
+        "RetainedEarningsAccumulatedDeficit": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2121838000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2447931000"
+            }
+        ],
+        "TreasuryStockValue": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "559269000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "720695000"
+            }
+        ],
+        "TreasuryStockCommonShares": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "15804000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "shares",
+                "value": "16345000"
+            }
+        ],
+        "AccumulatedOtherComprehensiveIncomeLossNetOfTax": [
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-72295000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-55296000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-77566000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-91686000"
+            }
+        ],
+        "StockholdersEquity": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1688781000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1844520000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "10000000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AdditionalPaidInCapitalMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "183822000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:RetainedEarningsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1499676000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:TreasuryStockCommonMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-471848000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-72295000"
+            },
+            {
+                "period": {
+                    "startDate": "2022-06-30",
+                    "endDate": "2022-06-30",
+                    "instant": "2022-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1149355000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "10000000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AdditionalPaidInCapitalMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "188646000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:RetainedEarningsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1792632000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:TreasuryStockCommonMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-477545000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-55296000"
+            },
+            {
+                "period": {
+                    "startDate": "2023-06-30",
+                    "endDate": "2023-06-30",
+                    "instant": "2023-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1458437000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "10000000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AdditionalPaidInCapitalMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "193778000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:RetainedEarningsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2121838000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:TreasuryStockCommonMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-559269000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-77566000"
+            },
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1688781000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:CommonStockMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "10000000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AdditionalPaidInCapitalMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "198970000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:RetainedEarningsMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2447931000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:TreasuryStockCommonMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-720695000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:AccumulatedOtherComprehensiveIncomeMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "-91686000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "segment": {
+                    "dimension": "us-gaap:StatementEquityComponentsAxis",
+                    "value": "us-gaap:ParentMember"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "1844520000"
+            }
+        ],
+        "LiabilitiesAndStockholdersEquity": [
+            {
+                "period": {
+                    "startDate": "2024-06-30",
+                    "endDate": "2024-06-30",
+                    "instant": "2024-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "2951910000"
+            },
+            {
+                "period": {
+                    "startDate": "2025-06-30",
+                    "endDate": "2025-06-30",
+                    "instant": "2025-06-30"
+                },
+                "decimals": "-3",
+                "unitRef": "usd",
+                "value": "3175544000"
+            }
+        ]
+    }
+}
