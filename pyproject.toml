@@ -11,7 +11,6 @@ requires-python = ">=3.12"
 packages=["financial_analysis"]
 dependencies = [
     "pydantic>=2.12.4",
-    "mcp>=1.1.2",
 ]
 
 [dependency-groups]
