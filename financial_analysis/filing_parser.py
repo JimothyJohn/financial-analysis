@@ -1,18 +1,14 @@
-import logging
 import json
-import gzip
-from sec_api import QueryApi
-from sec_api import RenderApi
-from sec_api import XbrlApi
+import logging
+import os
+
+from financial_analysis import edgar
+from financial_analysis.config import WHITELIST
 from financial_analysis.models import (
     CoverPage,
     Income,
 )
-from typing import Optional
-from financial_analysis.config import WHITELIST
-from financial_analysis.utils import get_value, get_income
-import urllib.request
-import os
+from financial_analysis.utils import get_income, get_value
 
 logging.basicConfig(level=logging.INFO, handlers=[])
 
@@ -20,66 +16,38 @@ logger = logging.getLogger(__name__)
 
 
 class FilingParser:
-    def __init__(self, company: str, year: int, api_key: str) -> None:
+    def __init__(self, company: str, year: int) -> None:
         assert company in WHITELIST, "Company not supported"
         self.company = company
         self.year = year
-        self.renderApi = RenderApi(api_key=api_key)
-        self.xbrlApi = XbrlApi(api_key)
-        self.queryApi = QueryApi(api_key=api_key)
         self._get_filing_as_json(company)
         self._factory()
 
+    def _cache_path(self) -> str:
+        return f"outputs/{self.year}/{self.company}_10-K.json"
+
     def _get_filing_as_json(self, company: str, save: bool = True) -> None:
-        if os.path.exists(f"outputs/{self.year}/{self.company}_10-K.json"):
-            with open(f"outputs/{self.year}/{self.company}_10-K.json", "r") as f:
+        if os.path.exists(self._cache_path()):
+            with open(self._cache_path(), "r") as f:
                 self.filing = json.load(f)
             return
 
-        # TODO Try some good old fashioned SQL injection here
-        query = {
-            "query": f'ticker:{company} AND formType:"10-K"',
-            "from": "0",
-            "size": "10",
-            "sort": [{"filedAt": {"order": "desc"}}],
-        }
+        self.filing, filing_url = edgar.get_filing_json(company, self.year)
 
-        filings = self.queryApi.get_filings(query)
-        if len(filings["filings"]) == 0:
-            raise Exception("No filings found")
-        filingUrl: str = filings["filings"][0]["linkToFilingDetails"]
-
-        # 10-K HTM File URL example
-        self.filing = self.xbrlApi.xbrl_to_json(htm_url=filingUrl)
         if save:
-            try:
-                response = urllib.request.urlopen(
-                    urllib.request.Request(
-                        filingUrl,
-                        headers={
-                            "User-Agent": "Nick<nick@nick.com>",
-                            "Accept-Encoding": "gzip, deflate",
-                            "Host": "www.sec.gov",
-                        },
-                    )
-                )
-                data = response.read()
-
-                # Check for gzip compression
-                if response.info().get("Content-Encoding") == "gzip":
-                    data = gzip.decompress(data)
-
-                with open(f"outputs/2025/{self.company}_10-K.htm", "wb") as f:
-                    f.write(data)
-
-            except Exception as e:
-                print(f"An error occurred: {e}")
-
-            with open(f"outputs/2025/{self.company}_10-k.json", "w") as f:
+            os.makedirs(f"outputs/{self.year}", exist_ok=True)
+            with open(self._cache_path(), "w") as f:
                 f.write(json.dumps(self.filing, indent=4))
 
+            try:
+                data = edgar._get(filing_url)
+                with open(f"outputs/{self.year}/{self.company}_10-K.htm", "wb") as f:
+                    f.write(data)
+            except OSError as e:
+                logger.error("Could not save filing document: %s", e)
+
     def _factory(self) -> None:
-        cp: Optional[CoverPage] = None
+        cp: CoverPage | None = None
         if self.filing.get("CoverPage") is not None:
             cp = CoverPage(
                 DocumentType=get_value(self.filing["CoverPage"]["DocumentType"]),

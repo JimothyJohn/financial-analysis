@@ -4,9 +4,7 @@ This is a simple financial analysis tool that uses the SEC's EDGAR API to retrie
 
 ## Quickstart (MacOS/Linux)
 
-o [Get API Key](https://sec-api.io/signup/free)
-
-o Reconfigure [.env.example](.env.example) and rename it to [.env](.env).
+No API key needed — all data comes straight from SEC EDGAR.
 
 ```bash
 # Choose a company by stock symbol
@@ -21,6 +19,6 @@ o Reconfigure [.env.example](.env.example) and rename it to [.env](.env).
 
 ## Resources
 
-Wouldn't be possible without [sec-api](https://github.com/janlukasschroeder/sec-api-python), hoping to make this totally independent and built in [Rust](https://github.com/TiesdeKok/fast_xbrl_parser/tree/master) eventually, though.
+Now totally independent: filings are located via the [EDGAR submissions API](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) and parsed from each filing's raw XBRL (instance + presentation linkbase). Originally bootstrapped with [sec-api](https://github.com/janlukasschroeder/sec-api-python); a [Rust](https://github.com/TiesdeKok/fast_xbrl_parser/tree/master) port is in progress.
 
 o [XBLR Guide](https://www.sec.gov/files/edgar/filer-information/specifications/xbrl-guide.pdf)

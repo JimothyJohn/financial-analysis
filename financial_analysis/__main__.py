@@ -1,11 +1,12 @@
-import os
 import argparse
 import logging
+import os
+
 from financial_analysis.filing_parser import FilingParser
-from financial_analysis.config import SEC_API_KEY
 from financial_analysis.models import Income
 
 # Writes log files toa folde rcalled .logs/
+os.makedirs(".logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO, handlers=[logging.FileHandler(".logs/financial_analysis.log")]
 )
@@ -35,7 +36,7 @@ def main(company: str = "aapl", year: int = 2025, output: str = "outputs/2025") 
     if company == "aapl":
         logger.info("\tRunning for Apple Computer Company Inc\n")
 
-    filing_parser = FilingParser(company, year, SEC_API_KEY)
+    filing_parser = FilingParser(company, year)
 
     # Print all values except those that have a net of 0 and format the value like a currency
     print("\n\t2025\n")
@@ -50,6 +51,7 @@ def main(company: str = "aapl", year: int = 2025, output: str = "outputs/2025") 
 
     # print(filing_parser.income.model_dump_json(indent=4))
 
+
 def get_keywords(financeModel):
     for field in financeModel.model_fields:
         print(field)
@@ -62,6 +64,7 @@ def get_keywords(financeModel):
         for keyword in val["keywords"]
     ]
 
+
 def get_values(filingCategory: dict, index: int) -> any:
     keywords = get_keywords()
 
@@ -72,7 +75,7 @@ def get_values(filingCategory: dict, index: int) -> any:
 
     return None
 
-    
+
 if __name__ == "__main__":
     income: Income = Income()
     get_keywords(income)

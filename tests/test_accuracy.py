@@ -1,11 +1,10 @@
-from financial_analysis.__main__ import main
-from financial_analysis.utils import get_income
-from financial_analysis.filing_parser import FilingParser
-from financial_analysis.config import SEC_API_KEY
-import os
 import logging
+import os
 
+from financial_analysis.filing_parser import FilingParser
+from financial_analysis.utils import get_income
 
+os.makedirs(".logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO, handlers=[logging.FileHandler(".logs/test_accuracy.log")]
 )
@@ -14,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class TestAccuracy:
     def test_ait_finances(self):
-        filing_parser = FilingParser("ait", 2024, SEC_API_KEY)
+        filing_parser = FilingParser("ait", 2025)
         finances = get_income(filing_parser.filing, filing_parser.year)
 
         assert finances.Revenue["net"] == 4563424000
@@ -33,7 +32,7 @@ class TestAccuracy:
     """
 
     def test_gpc_finances(self):
-        filing_parser = FilingParser("gpc", 2025, SEC_API_KEY)
+        filing_parser = FilingParser("gpc", 2024)
         finances = get_income(filing_parser.filing, filing_parser.year)
 
         assert finances.Revenue["net"] == 23486569000
