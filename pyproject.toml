@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 packages=["financial_analysis"]
 dependencies = [
-    "pydantic>=2.13.4",
+    "pydantic>=2.13.5",
 ]
 
 [dependency-groups]
